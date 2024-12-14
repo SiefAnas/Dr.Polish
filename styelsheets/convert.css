@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    padding: 15px 30px;
+    color: #ecf0f1;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #e67e22;
+    border-radius: 5px;
+}
+
+/* Main content styles */
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.conversion-table {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.conversion-table h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.conversion-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.conversion-table th,
+.conversion-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.conversion-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.conversion-table td {
+    font-size: 1rem;
+}
+
+.conversion-table input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e67e22;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: #470506;
+    }
+}
+/* Footer styles */
+footer {
+    text-align: center;
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 15px;
+    margin-top: 50px;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Services| Dr. Polish</title>
+
+	
+    <link rel="stylesheet" href="../styelsheets/services.css">
+	
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <img src="../images/Asset 1_4x.avif" alt="Logo" class="logo">
+		            <h1>Services</h1>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="book.html">Book Online</a></li>
+				<li><a href="convert.html">Convert Prices</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Services section -->
+        <section class="services-section">
+            <h1>Our Services</h1>
+            <ul class="services-container">
+                <li class="service-box" onclick="showModal('interior-cleaning')">
+                    <i class="fas fa-car-alt"></i>
+                    <h2>Interior Cleaning</h2>
+                    <p>Keep your car's interior spotless and fresh.</p>
+                </li>
+                <li class="service-box" onclick="showModal('exterior-polish')">
+                    <i class="fas fa-car-side"></i>
+                    <h2>Exterior <br>Polishing</h2>
+                    <p>Restore your car's shine and protect its paint.</p>
+                </li>
+                <li class="service-box" onclick="showModal('engine-detailing')">
+                    <i class="fas fa-tools"></i>
+                    <h2>Engine Detailing</h2>
+                    <p>Ensure your engine is clean and running smoothly.</p>
+                </li>
+                <li class="service-box" onclick="showModal('wheel-tire-care')">
+                    <i class="fas fa-tire"></i>
+                    <h2>Wheel and Tire Care</h2>
+                    <p>Keep your wheels and tires in top condition.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Modals for each service -->
+        <section id="interior-cleaning" class="modal">
+            <article class="modal-content">
+                <span class="close" onclick="closeModal('interior-cleaning')">&times;</span>
+                <h2>Interior Cleaning</h2>
+                <img src="../images/interior.jpg" alt="Interior Cleaning">
+                <p>Keep your car's interior spotless and fresh. Our interior cleaning service includes vacuuming, dashboard cleaning, window washing, and upholstery care to ensure your car's interior looks and feels like new.</p>
+            </article>
+        </section>
+
+        <section id="exterior-polish" class="modal">
+            <article class="modal-content">
+                <span class="close" onclick="closeModal('exterior-polish')">&times;</span>
+                <h2>Exterior Polish</h2>
+                <img src="../images/Exterior.jpg" alt="Exterior Polish">
+                <p>Restore your car's shine and protect its paint. Our exterior polish service includes hand washing, waxing, and paint sealant application to give your car a long-lasting, glossy finish.</p>
+            </article>
+        </section>
+
+        <section id="engine-detailing" class="modal">
+            <article class="modal-content">
+                <span class="close" onclick="closeModal('engine-detailing')">&times;</span>
+                <h2>Engine Detailing</h2>
+                <img src="../images/engine detailing.png" alt="Engine Detailing">
+                <p>Ensure your engine is clean and running smoothly. Our engine detailing service includes degreasing, cleaning, and dressing to keep your engine compartment looking its best.</p>
+            </article>
+        </section>
+
+        <section id="wheel-tire-care" class="modal">
+            <article class="modal-content">
+                <span class="close" onclick="closeModal('wheel-tire-care')">&times;</span>
+                <h2>Wheel and Tire Care</h2>
+                <img src="../images/tire care.png" alt="Wheel and Tire Care">
+                <p>Keep your wheels and tires in top condition. Our wheel and tire care service includes cleaning, polishing, and dressing to enhance the appearance and performance of your wheels and tires.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dr. Polish. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Function to show modal
+        function showModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        // Function to close modal
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>

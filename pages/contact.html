@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us | Dr. Polish</title>
+    <link rel="stylesheet" href="../styelsheets/contact.css">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <img src="../images/Asset 1_4x.avif" alt="Logo" class="logo">
+        <h2>Contact Us</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="book.html">Book Online</a></li>
+                <li><a href="convert.html">Convert Prices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Get In Touch section -->
+        <section class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>If you have any questions or would like to schedule an appointment, feel free to contact us!</p>
+            <ul>
+                <li>Email: <a href="mailto:contact@cardetailing.com">contact@cardetailing.com</a></li>
+                <li>Phone: <a href="tell:617-537-9228">617-537-9228</a></li>
+                <li>Address: South Shore, MA, USA.<br>We are ready to drive for you wherever you are in North America.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Form section -->
+        <section class="contact-form">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dr. Polish. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const form = event.target;
+            const isValid = form.checkValidity(); // Check if the form is valid
+
+            if (isValid) {
+                // Process form data here
+                alert('Form submitted successfully!');
+            } else {
+                // Preserve the entered data and show a validation error message
+                form.classList.add('was-validated');
+                alert('Please fill all required fields correctly.');
+            }
+        });
+    </script>
+</body>
+</html>

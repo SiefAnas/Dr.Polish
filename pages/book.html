@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Online | Dr. Polish</title>
+    <link rel="stylesheet" href="../styelsheets/book.css">
+</head>
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <img src="../images/Asset 1_4x.avif" alt="Logo" class="logo">
+        <h2>Book Here</h2>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="book.html">Book Online</a></li>
+                <li><a href="convert.html">Convert Prices</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Booking Information section -->
+        <section class="booking-info">
+            <h2>Available Services and Pricing</h2>
+            <p>Choose from our range of professional car detailing services:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price (USD)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Interior Cleaning</td>
+                        <td class="us-price">$100</td>
+                    </tr>
+                    <tr>
+                        <td>Exterior Cleaning</td>
+                        <td class="us-price">$120</td>
+                    </tr>
+                    <tr>
+                        <td>Full Package</td>
+                        <td class="us-price">$200</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>To book an appointment, please call us at <a href="tel:617-537-9228">617-537-9228</a> or email <a href="mailto:contact@cardetailing.com">contact@cardetailing.com</a>.</p>
+        </section>
+
+        <!-- Online Booking Form section -->
+        <section class="booking-form">
+            <h2>Online Booking Form</h2>
+            <form id="bookingForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="service">Select Service:</label>
+                <select id="service" name="service" required>
+                    <option value="interior-cleaning">Interior Cleaning</option>
+                    <option value="exterior-cleaning">Exterior Cleaning</option>
+                    <option value="full-package">Full Package</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Dr. Polish. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            const form = event.target;
+            const isValid = form.checkValidity(); // Check if the form is valid
+
+            if (isValid) {
+                // Process form data here
+                alert('Form submitted successfully!');
+            } else {
+                // Preserve the entered data and show a validation error message
+                form.classList.add('was-validated');
+                alert('Please fill all required fields correctly.');
+            }
+        });
+    </script>
+</body>
+</html>
